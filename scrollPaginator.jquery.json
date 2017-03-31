@@ -1,0 +1,37 @@
+{
+    "name": "scrollPaginator",
+    "version": "0.0.1",
+    "description": "jquery plugin for pagination in the index page on scroll of page and auto filling mechanism.",
+    "title": "scrollPaginator",
+    "main": "jquery.scrollPaginator.js",
+    "scripts": {
+        "test": "grunt jshint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:aashishgarg/scrollPaginator.git"
+    },
+    "keywords": [
+        "scrollPaginator",
+        "infiniteScroll",
+        "initialLimit",
+        "limit",
+        "pagination",
+        "scroll",
+        "autoScroll",
+        "ajaxSettings"
+    ],
+    "author": {
+        "name": "Ashish Garg",
+        "url": "https://github.com/aashishgarg.com"
+    },
+    "licenses": [
+        {
+            "type": "GPLv2",
+            "url": "http://www.example.com/licenses/gpl.html"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.4.3"
+    }
+}
