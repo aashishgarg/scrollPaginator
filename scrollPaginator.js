@@ -116,5 +116,17 @@
 
 }(jQuery));
 
+$('.sheet-block').scrollPaginator({
+    items_source_url: 'Page_elements_path',
+    total_pages: 10,
 
+    beforePageLoad: function () {
+    // --- For something to be processed before rendering new page --- //
 
+},
+
+afterPageLoad: function () {
+    // --- Code for inserting new page elements in the DOM --- //
+
+}
+});
