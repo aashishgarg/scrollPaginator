@@ -71,9 +71,6 @@
             if (isSampleVisible()) {
                 if (settings.request_next) {
                     if (settings.last_loaded_page < settings.total_pages) {
-                        if(typeof(settings.beforePageLoad()) == 'function'){
-                            settings.beforePageLoad();
-                        }
                         increment_page();
 
                         /*--- For preventing multiple requests ---*/
@@ -89,9 +86,6 @@
                         }).fail(function () {
                             decrement_page();
                         });
-                        if(typeof(settings.afterPageLoad()) == 'function'){
-                            settings.afterPageLoad();
-                        }
                     } else {
                         settings.request_next = false;
                     }
@@ -113,20 +107,4 @@
         var scroll_paginator = new scrollPaginator($(this), options);
         return this;
     };
-
 }(jQuery));
-
-$('.sheet-block').scrollPaginator({
-    items_source_url: 'Page_elements_path',
-    total_pages: 10,
-
-    beforePageLoad: function () {
-    // --- For something to be processed before rendering new page --- //
-
-},
-
-afterPageLoad: function () {
-    // --- Code for inserting new page elements in the DOM --- //
-
-}
-});
